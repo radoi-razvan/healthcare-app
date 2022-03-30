@@ -1,0 +1,27 @@
+<div class="patient-item">
+  <h4 class="patient">{{ patient.firstName }}</h4>
+</div>
+<div class="patient-item">
+  <h4 class="patient">{{ patient.lastName }}</h4>
+</div>
+<div class="patient-item">
+  <!-- <p class="patient">{{ patient.dateOfBirth.toISOString().split("T")[0] }}</p> -->
+  <p class="patient">{{ patient.dateOfBirth }}</p>
+</div>
+<div class="patient-item">
+  <p class="patient">{{ patient.sex }}</p>
+</div>
+<div class="patient-item patient-item-edit-btns">
+  <app-button
+    color="limegreen"
+    text="Edit"
+    (btnClick)="editPatient()"
+  ></app-button>
+</div>
+<div class="patient-item">
+  <app-button
+    color="firebrick"
+    text="Delete"
+    (btnClick)="deletePatient()"
+  ></app-button>
+</div>

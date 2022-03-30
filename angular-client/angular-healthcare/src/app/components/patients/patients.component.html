@@ -1,0 +1,26 @@
+<div class="box">
+  <div class="patient-header">
+    <h3><fa-icon [icon]="faUser"></fa-icon> First Name</h3>
+  </div>
+  <div class="patient-header">
+    <h3><fa-icon [icon]="faUserTie"></fa-icon> Last Name</h3>
+  </div>
+  <div class="patient-header">
+    <h3><fa-icon [icon]="faCalendar"></fa-icon> Date Of Birth</h3>
+  </div>
+  <div class="patient-header">
+    <h3><fa-icon [icon]="faVenusMars"></fa-icon> Sex</h3>
+  </div>
+  <div class="patient-header">
+    <h3></h3>
+  </div>
+  <div class="patient-header">
+    <h3></h3>
+  </div>
+</div>
+<app-patient-item
+  *ngFor="let patient of patients"
+  [patient]="patient"
+  class="box"
+>
+</app-patient-item>
