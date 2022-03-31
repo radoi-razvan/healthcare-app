@@ -6,5 +6,5 @@ export interface Patient {
   sex: string;
   personalIdentificationNumber: string;
   phoneNumber: string;
-  orderNumber?: number;
+  orderNumber: number;
 }

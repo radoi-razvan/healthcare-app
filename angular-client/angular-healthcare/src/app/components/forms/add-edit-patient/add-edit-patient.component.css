@@ -1,0 +1,19 @@
+.add-edit-btn {
+  width: 80%;
+}
+
+.warning-message-container {
+  color: red;
+  padding: 20px;
+}
+
+.warning-message {
+  border: 3px solid red;
+  width: fit-content;
+  padding: 5px;
+  margin-left: 75px;
+}
+
+.warning-message-display {
+  display: none;
+}

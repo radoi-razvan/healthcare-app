@@ -1,0 +1,80 @@
+<a routerLink="/" class="back-a btn back-btn form-back-btn">Go Back</a>
+<div class="form-container">
+  <h2 class="form-title">Manage Patient</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        [(ngModel)]="firstName"
+        id="firstName"
+        required
+      />
+    </div>
+    <div class="form-control">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        [(ngModel)]="lastName"
+        id="lastName"
+        required
+      />
+    </div>
+    <div class="form-control form-control-check">
+      <label for="dateOfBirth">Date Of Birth</label>
+      <input
+        type="date"
+        name="dateOfBirth"
+        [(ngModel)]="dateOfBirth"
+        id="dateOfBirth"
+        required
+      />
+    </div>
+    <div class="form-control form-control-check">
+      <label for="sex">Sex</label>
+      <select
+        type="text"
+        class="form-control form-select"
+        [(ngModel)]="sex"
+        id="sex"
+        name="sex"
+        required
+      >
+        <option value="M">M</option>
+        <option value="F">F</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label for="personalIdentificationNumber"
+        >Personal Identification Number</label
+      >
+      <input
+        type="text"
+        name="personalIdentificationNumber"
+        [(ngModel)]="personalIdentificationNumber"
+        id="personalIdentificationNumber"
+        required
+      />
+    </div>
+    <div class="form-control">
+      <label for="phoneNumber">Phone Number</label>
+      <input
+        type="text"
+        name="phoneNumber"
+        [(ngModel)]="phoneNumber"
+        id="phoneNumber"
+        required
+      />
+    </div>
+    <div class="form-control">
+      <label for="orderNumber">Order Number</label>
+      <input type="number" name="orderNumber" id="orderNumber" disabled />
+    </div>
+    <input type="submit" value="Submit" class="btn btn-block add-edit-btn" />
+  </form>
+  <div class="warning-message-container warning-message-display" id="warningMessage">
+    <h3 class="warning-message">Invalid input format!</h3>
+  </div>
+</div>

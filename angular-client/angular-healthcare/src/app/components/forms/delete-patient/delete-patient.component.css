@@ -1,0 +1,10 @@
+.delete-form {
+    justify-content: center;
+    text-align: center;
+}
+
+.delete-message {
+    font-size: larger;
+    padding: 5px;
+    margin-bottom: 5px;
+}

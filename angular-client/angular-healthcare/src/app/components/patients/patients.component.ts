@@ -25,6 +25,11 @@ export class PatientsComponent implements OnInit {
   ngOnInit(): void {
     this.patientService
       .getPatients()
-      .subscribe((patients) => (this.patients = patients));
+      .subscribe(
+        (patients) =>
+          (this.patients = patients.sort((a, b) =>
+            a.orderNumber! > b.orderNumber! ? 1 : -1
+          ))
+      );
   }
 }

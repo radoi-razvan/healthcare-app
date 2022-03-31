@@ -12,12 +12,4 @@ export class PatientItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  editPatient(): void {
-    console.log('edit');
-  }
-
-  deletePatient(): void {
-    console.log('delete');
-  }
 }

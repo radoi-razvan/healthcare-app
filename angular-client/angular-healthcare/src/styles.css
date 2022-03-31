@@ -46,6 +46,12 @@ body {
   width: 100%;
 }
 
+.form-container {
+  margin: auto;
+  width: 50%;
+  margin-right: 200px;
+}
+
 .form-control {
   margin: 20px 0;
 }
@@ -55,7 +61,7 @@ body {
 }
 
 .form-control input {
-  width: 100%;
+  width: 80%;
   height: 40px;
   margin: 5px;
   padding: 3px 7px;
@@ -75,4 +81,38 @@ body {
 .form-control-check input {
   flex: 2;
   height: 20px;
+  margin-right: 160px;
+  max-width: fit-content;
+}
+
+.form-select {
+  flex: 2;
+  height: 20px;
+  margin-right: 385px;
+  max-width: fit-content;
+}
+
+.form-title {
+  margin-left: 100px;
+}
+
+.delete-form-link {
+  background-color: firebrick;
+}
+
+.edit-form-link {
+  background-color: seagreen;
+}
+
+.add-form-link {
+  background-color: green;
+}
+
+.back-btn {
+  background-color: forestgreen;
+}
+
+.back-a {
+  text-decoration: none;
+  color: white;
 }
