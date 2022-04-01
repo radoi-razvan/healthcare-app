@@ -58,6 +58,7 @@ body {
 
 .form-control label {
   display: block;
+  font-weight: 900;
 }
 
 .form-control input {

@@ -9,6 +9,7 @@
         name="firstName"
         [(ngModel)]="firstName"
         id="firstName"
+        placeholder="John"
         required
       />
     </div>
@@ -19,6 +20,7 @@
         name="lastName"
         [(ngModel)]="lastName"
         id="lastName"
+        placeholder="Doe"
         required
       />
     </div>
@@ -55,6 +57,7 @@
         name="personalIdentificationNumber"
         [(ngModel)]="personalIdentificationNumber"
         id="personalIdentificationNumber"
+        placeholder="0123456789127"
         required
       />
     </div>
@@ -65,12 +68,13 @@
         name="phoneNumber"
         [(ngModel)]="phoneNumber"
         id="phoneNumber"
+        placeholder="0712345671"
         required
       />
     </div>
     <div class="form-control">
       <label for="orderNumber">Order Number</label>
-      <input type="number" name="orderNumber" id="orderNumber" disabled />
+      <input type="number" name="orderNumber" id="orderNumber" placeholder="Automatically Generated" disabled />
     </div>
     <input type="submit" value="Submit" class="btn btn-block add-edit-btn" />
   </form>
