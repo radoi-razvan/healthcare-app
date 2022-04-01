@@ -39,6 +39,46 @@
       "personalIdentificationNumber": "0123456789126",
       "phoneNumber": "0712345672",
       "orderNumber": 4
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Pitt",
+      "dateOfBirth": "1995-06-01",
+      "sex": "M",
+      "personalIdentificationNumber": "0123456789127",
+      "phoneNumber": "0712345673",
+      "orderNumber": 5,
+      "id": 5
+    },
+    {
+      "firstName": "Leila",
+      "lastName": "Samson",
+      "dateOfBirth": "1987-11-01",
+      "sex": "F",
+      "personalIdentificationNumber": "0123456789128",
+      "phoneNumber": "0712345679",
+      "orderNumber": 6,
+      "id": 6
+    },
+    {
+      "firstName": "Andrew",
+      "lastName": "Twain",
+      "dateOfBirth": "1984-07-01",
+      "sex": "M",
+      "personalIdentificationNumber": "0123456789129",
+      "phoneNumber": "0712345671",
+      "orderNumber": 7,
+      "id": 7
+    },
+    {
+      "firstName": "Nicolas",
+      "lastName": "Gates",
+      "dateOfBirth": "1989-08-01",
+      "sex": "M",
+      "personalIdentificationNumber": "0123456789131",
+      "phoneNumber": "0712345672",
+      "orderNumber": 8,
+      "id": 8
     }
   ]
 }

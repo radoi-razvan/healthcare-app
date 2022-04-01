@@ -31,9 +31,12 @@ export class AddEditPatientComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    // const warningMessage = document.getElementById('warningMessage');
-    // warningMessage!.classList.remove("warning-message-visibility");
-   
+    if (!this.validFormInput()) {
+      const warningMessage = document.getElementById('warningMessage');
+      warningMessage!.classList.remove('warning-message-display');
+      return;
+    }
+
     const newPatient = {
       firstName: this.firstName,
       lastName: this.lastName,
@@ -83,5 +86,70 @@ export class AddEditPatientComponent implements OnInit {
     this.personalIdentificationNumber = '';
     this.phoneNumber = '';
     this.orderNumber = 0;
+  }
+
+  validFormInput(): boolean {
+    let validFirstNameCheck: boolean = false;
+    let validLastNameCheck: boolean = false;
+    let validDateOfBirthCheck: boolean = false;
+    let validSexCheck: boolean = false;
+    let validPersonalIdentificationNumberCheck: boolean = false;
+    let validPhoneNumberCheck: boolean = false;
+
+    const pinPattern = /[0-9]{13}/;
+    const phoneNumberPattern = /[0-9]+/;
+
+    const currentDate = new Date();
+    const formInputDate = new Date(`${this.dateOfBirth}T03:24:00`);
+
+    if (this.notEmptyFormInput()) {
+      validFirstNameCheck = true;
+      validLastNameCheck = true;
+      validSexCheck = true;
+
+      if (this.personalIdentificationNumber.match(pinPattern)) {
+        validPersonalIdentificationNumberCheck = true;
+      }
+      if (this.phoneNumber.match(phoneNumberPattern)) {
+        validPhoneNumberCheck = true;
+      }
+      if (currentDate.getFullYear() > formInputDate.getFullYear()) {
+        validDateOfBirthCheck = true;
+      } else if (
+        currentDate.getFullYear() === formInputDate.getFullYear() &&
+        currentDate.getMonth() + 1 > formInputDate.getMonth() + 1
+      ) {
+        validDateOfBirthCheck = true;
+      } else if (
+        currentDate.getFullYear() === formInputDate.getFullYear() &&
+        currentDate.getMonth() + 1 === formInputDate.getMonth() + 1 &&
+        currentDate.getDate() > formInputDate.getDate()
+      ) {
+        validDateOfBirthCheck = true;
+      }
+    }
+
+    return (
+      validFirstNameCheck &&
+      validLastNameCheck &&
+      validDateOfBirthCheck &&
+      validSexCheck &&
+      validPersonalIdentificationNumberCheck &&
+      validPhoneNumberCheck
+    );
+  }
+
+  notEmptyFormInput(): boolean {
+    if (
+      this.firstName &&
+      this.lastName &&
+      this.dateOfBirth &&
+      this.sex &&
+      this.personalIdentificationNumber &&
+      this.phoneNumber
+    ) {
+      return true;
+    }
+    return false;
   }
 }
