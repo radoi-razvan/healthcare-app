@@ -94,7 +94,7 @@ First project:
 ## Usage
 
 First project:
-- In Visual Studio Code run the the angular server using `ng serve`.
+- In Visual Studio Code run the angular server using `ng serve`.
 - In Visual Studio Code run the json web server using `npm start server`.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
