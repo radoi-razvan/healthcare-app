@@ -64,7 +64,7 @@ IDE:
 
 First project main page:
 
-![main_page.jpg][main-page]
+![[angular_page.jpg][angular-main-page]
 
 First project add/edit form:
 
@@ -118,6 +118,6 @@ First project:
 
 [radoi-razvan]: https://github.com/radoi-razvan
 
-[main-page]: project_photos/main_page.jpg
+[angular-main-page]: project_photos/angular_main_page.jpg
 [angular-add-edit-page]: project_photos/angular_add_edit_page.jpg
 [angular-delete-page]: project_photos/angular_delete_page.jpg
