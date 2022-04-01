@@ -64,7 +64,7 @@ IDE:
 
 First project main page:
 
-![[angular_page.jpg][angular-main-page]
+![angular_page.jpg][angular-main-page]
 
 First project add/edit form:
 
