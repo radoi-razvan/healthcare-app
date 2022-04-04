@@ -28,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There two projects. The first project is a patients management app. Used technologies: Angular, HTML, CSS, JavaScript, TypeScript. The second project is a practitioners management app. Used technologies: Node.JS .
+There two projects. The first project is a patients management app. Used technologies: Angular, HTML, CSS, JavaScript, TypeScript. The second project is a doctors management app. Used technologies: NodeJS .
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -39,12 +39,16 @@ First Project:
 - Patients waiting list display sorted by the order number
 - Patients CRUD operations (Create, Read, Update, Delete) 
 
+Second Project:
+- Doctors JSON and csv file post request
+- Role based authentication
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
 Back End:
-* [Node.JS][node]
+* [NodeJS][node]
 
 Front End:
 * [HTML][html]
@@ -74,6 +78,11 @@ First project delete page:
 
 ![angular_delete_page.jpg][angular-delete-page]
 
+Second project post request JSON, post request JSON same id, post request CSV file:
+
+![node_post_test.jpg][node-post-test]
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -96,6 +105,51 @@ First project:
 First project:
 - In Visual Studio Code run the angular server using `ng serve`.
 - In Visual Studio Code run the json web server using `npm start server`.
+
+Second Project:
+- In Visual Studio Code type the following command `npm install`.
+- In Visual Studio Code run the server using `npm run dev`.
+- In Postman add a new header for POST requests with the key:`x-vamf-jwt`
+and the value: `Bearer <token>` where `<token>` is the Base64 encoding for the following format 
+```
+{
+  "authenticated": true,
+  "iss": "JWT Builder",
+  "facility": ["12", "13"],
+  "roles": ["Admin"]
+}
+``` 
+- In the Postman body of the POST request you can send JSON payload with the following format
+```
+{
+	"resourceType" : "Practitioner",
+	"id": "1",
+	"name": [{"family":"TestFamily","given":["TestGiven"],"text":"TestFamily TestGiven"}],
+	"facility": [
+		{	
+			"value": "1",
+			"system": "http://us.gov/NPI",
+			"name": "Facility Name"
+		},
+		{	
+			"value": "2",
+			"system": "http://us.gov/NPI",
+			"name": "Other Facility Name"
+		}
+	],
+	"active": true
+}
+```
+- Or select `form-data` and add a CSV file with the key `file` and the format following 
+```
+ID, FamilyName, GivenName, FacilityId, SystemId, NameId, Active
+1, Popescu, George, 12, http://ro.gov/NPI, Spital Tulcea, true
+1, Popescu, George, 13, http://ro.gov/NPI, Spital Sfantu Gheorghe, true
+1, Popescu, George, 13, http://ro.gov/NPI, Spital Constanta, false
+2, Ionescu, Catalin, 12, http://ro.gov/NPI, Spital Tulcea, true
+```
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -121,3 +175,4 @@ First project:
 [angular-main-page]: project_photos/angular_main_page.jpg
 [angular-add-edit-page]: project_photos/angular_add_edit_page.jpg
 [angular-delete-page]: project_photos/angular_delete_page.jpg
+[node-post-test]: project_photos/node_post_test.jpg
