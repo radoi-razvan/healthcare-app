@@ -142,7 +142,7 @@ and the value: `Bearer <token>` where `<token>` is the Base64 encoding for the f
 	"active": true
 }
 ```
-- Or select `form-data` and add a CSV file with the key `file` and the format following 
+- Or select `form-data` and add a CSV file with the key `file` and the following format
 ```
 ID, FamilyName, GivenName, FacilityId, SystemId, NameId, Active
 1, Popescu, George, 12, http://ro.gov/NPI, Spital Tulcea, true
