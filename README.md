@@ -95,6 +95,9 @@ Second project post request JSON, post request JSON same id, post request CSV fi
 First project:
 - There is no installation process required.
 
+Second Project:
+- In Visual Studio Code type the following command `npm install`.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -107,7 +110,6 @@ First project:
 - In Visual Studio Code run the json web server using `npm start server`.
 
 Second Project:
-- In Visual Studio Code type the following command `npm install`.
 - In Visual Studio Code run the server using `npm run dev`.
 - In Postman add a new header for POST requests with the key:`x-vamf-jwt`
 and the value: `Bearer <token>` where `<token>` is the Base64 encoding for the following format 
