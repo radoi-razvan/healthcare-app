@@ -82,6 +82,9 @@ Second project post request JSON, post request JSON same id, post request CSV fi
 
 ![node_post_test.jpg][node-post-test]
 
+Second project post request JSON included facilities ids:
+
+![node_post_json_included_facilities_ids.jpg][node-post-json-included-facilities_ids]
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -178,3 +181,4 @@ ID, FamilyName, GivenName, FacilityId, SystemId, NameId, Active
 [angular-add-edit-page]: project_photos/angular_add_edit_page.jpg
 [angular-delete-page]: project_photos/angular_delete_page.jpg
 [node-post-test]: project_photos/node_post_test.jpg
+[node-post-json-included-facilities_ids]: project_photos/node_post_json_included_facilities_ids.jpg
